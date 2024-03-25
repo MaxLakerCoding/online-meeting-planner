@@ -5,12 +5,18 @@
 body{
     background: #202020;
     min-height: 100vh;
-    /* display: flex; */
     font-family: Arial, Helvetica, sans-serif;
     color: #ededed;
     user-select: none;
     overflow-y: hidden;
 }
+a{
+    color: #ededed;
+    text-decoration: none;
+}
+/* a:hover{
+    color: #FFD700;
+} */
 .divider{
     width: 92%;
     height: 1px;
@@ -33,10 +39,11 @@ body{
     height: 34px;
     padding: 3px;
     margin-right: 10px;
+    cursor: pointer;
 }
 .edit:hover{
     background-color: #414141;
-    border-radius: 15%;
+    border-radius: .5em;
 }
 .edit_active{
     background: url(img/edit_active.svg);
@@ -63,11 +70,50 @@ body{
     gap: 1.5vh;
 }
 .shedule{
-    width: 75%;
-    height: 100%;
+    width: calc(75% - 3vh);
+    height: calc(100% - 3vh);
     background: #313131;
     border-radius: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5vh;
+    padding: 1.5vh;
 }
+.shedule_day{
+    width: calc(23% - 3.6vh);
+    height: calc(44% - 3.6vh);
+    background: #414040;
+    padding: 1.8vh;
+    border-radius: .5em;
+}
+.shedule_empty_space_filler{
+    width: 23%;
+    height: 40%;
+}
+.shedule_day h1{
+    font-size: 32px;
+}
+.meeting_list{
+    list-style: none;
+    width: 100%;
+    margin-top: 1.5vh;
+}
+.meeting_list li{
+    width: 80%;
+    height: 28px;
+    display: flex;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.meeting_list li a{
+    margin-left: .5em;
+    letter-spacing: .1em;
+}
+
+/* info board on right corner of the page */
 .info{
     width: calc(25% - 1.5vh);
     height: 100%;
@@ -75,6 +121,7 @@ body{
     border-radius: .5em;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .time_and_date{
     height: 20vh;
@@ -105,8 +152,67 @@ body{
     margin-top: 1vh;
     font-size: 20px;
 }
+.calls_list{
+    width: 100%;
+    list-style: none;
+    margin-top: .75vh;
+}
+.calls_list li{
+    width: 80%;
+    height: 25px;
+    display: flex;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.calls_list li span{
+    letter-spacing: .2em;
+}
+.call_start_hours, .call_end_hours{
+    margin-left: .6em;
+}
+.call_start_minutes, .call_end_minutes{
+    margin-left: .2em;
+    margin-right: .4em;
+}
+.info_current{
+    width: calc(100% - 3vh);
+    height: 12vh;
+    padding: 1.5vh;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.connect{
+    width: 90%;
+    height: 8vh;
+    border-radius: .8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #16a084;
+    color: #e8e8e8;
+}
+.connect:hover{
+    background: #1ABB9C;
+    color: #ffffff;
+}
 
 
+.edit_button{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: .5em;
+}
+.edit_button:hover{
+    background-color: #414141;
+    border-radius: 15%;
+}
 /* text colorizers */
 .text_golden{
     color: gold;

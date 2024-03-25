@@ -1,5 +1,15 @@
 edit.addEventListener('click', ()=>{
-    edit.classList.toggle('edit_active')
+    if(edit.classList.contains("edit_active")){
+        edit.classList.remove('edit_active')
+        for (let i = 0; i < editButtons.length; i++) {
+            editButtons[i].classList.add("none") 
+        }
+    }else{
+        edit.classList.add('edit_active')
+        for (let i = 0; i < editButtons.length; i++) {
+            editButtons[i].classList.remove("none") 
+        }
+    }
 })
 
 // -------------------------------------------------------------------
@@ -33,9 +43,13 @@ setInterval(()=>{
 
     // --------------------------------------------------------------------------
 
+    const week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    let day = currentDate.getDay()
     let days = currentDate.getDate()
     let months = currentDate.getMonth() + 1
     let year = currentDate.getFullYear()
+
+    document.querySelector('.day').innerHTML = week[day]
 
     if(days < 10){
         document.querySelector('.days').innerHTML = '0' + days
