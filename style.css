@@ -14,9 +14,9 @@ a{
     color: #ededed;
     text-decoration: none;
 }
-/* a:hover{
+a:hover{
     color: #FFD700;
-} */
+}
 .divider{
     width: 92%;
     height: 1px;
@@ -121,13 +121,13 @@ a{
     height: 28px;
     display: flex;
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 18px;
     align-items: center;
 }
 
 .meeting_list li a{
     margin-left: .5em;
-    letter-spacing: .1em;
+    letter-spacing: .05em;
 }
 
 /* info board on right corner of the page */
@@ -250,17 +250,92 @@ a{
 }
 .notification_meeting{
     width: 46vh;
-    height: 36vh;
+    height: 40.5vh;
     background: #202020;
     border-radius: 1em;
     padding: 2vh;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .notification h1{
     width: 100%;
     text-align: center;
     margin-bottom: 1.5vh;
+}
+.notification span{
+    margin-left: 4%;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+.notification input[type="text"]{
+    width: calc(92% - 9vh);
+    height: 3vh;
+    margin-left: 4%;
+    background: #0f0f0f;
+    border: 1px solid #434343;
+    border-radius: 1em;
+    padding: 1.5vh;
+    padding-right: 7.5vh;
+    color: #c7c7c7;
+    font-weight: bold;
+    font-size: 15px;
+}
+.notification input[type="text"]:active{
+    color: #ededed;
+}
+.name_length{
+    position: absolute;
+    top: 12vh;
+    right: 6vh;
+}
+.name_invalid{
+    border: 1px solid rgb(237, 52, 52);
+    color: rgb(237, 52, 52);
+}
+.buttonbox{
+    width: 92%;
+    display: flex;
+    margin-top: 3vh;
+    margin-left: 2vh;
+    gap: 1.5vh;
+    justify-content: center;
+}
+.reject, .approve{
+    width: 50%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5em;
+    cursor: pointer;
+}
+.reject{
+    background-color: #B62324;
+}
+.reject:hover{
+    background-color: #a21f1f;
+}
+.approve{
+    background-color: #29903B;
+}
+.approve:hover{
+    background-color: #21752f;
+}
+.leave_empty{
+    width: 92%;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5em;
+    background-color: #5a5a5a;
+    margin-top: 1.5vh;
+    margin-left: 2vh;
+    cursor: pointer;
+}
+.leave_empty:hover{
+    background-color: #474747;
 }
 
 /* text colorizers */

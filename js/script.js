@@ -12,11 +12,14 @@ edit.addEventListener('click', ()=>{
     }
 })
 
+
+
 // -------------------------------------------------------------------
 
-let currentDate = new Date();
 
-setInterval(()=>{
+
+let currentDate = new Date();
+function refreshDate(){
     currentDate = new Date();
 
     let hours = currentDate.getHours()
@@ -64,5 +67,88 @@ setInterval(()=>{
     }
     
     document.querySelector('.year').innerHTML = year
-
+}
+refreshDate()
+setInterval(()=>{
+    refreshDate()
 }, 1000)
+
+
+
+// -------------------------------------------------------------------
+
+
+
+reject.addEventListener('click', ()=>{
+    document.querySelector('.notification').classList.add('none')
+    document.querySelector('.notification_meeting').classList.add('none')
+})
+
+for (let i = 0; i < meetingEditButtons.length; i++) {
+    meetingEditButtons[i].addEventListener('click', ()=>{
+        document.querySelector('.notification').classList.remove('none'); document.querySelector('.notification_meeting').classList.remove('none')
+        inputMeetingName.value = meeting_list[i].innerHTML
+        inputMeetingLink.value = meeting_list[i].getAttribute('href')
+
+        const confirmHandler = ()=>{
+            if(inputMeetingName.value == ''){
+                alert('Meeting display name cannot be empty. Please type something')
+            }else{
+                meeting_list[i].innerHTML = inputMeetingName.value
+                meeting_list[i].setAttribute('href', inputMeetingLink.value)
+                isChanged = true
+                refreshMeetingData()
+                document.querySelector('.notification').classList.add('none')
+                document.querySelector('.notification_meeting').classList.add('none')
+                confirm.removeEventListener('click', confirmHandler)
+            }
+        }
+        confirm.removeEventListener('click', confirmHandler)
+        confirm.addEventListener('click', confirmHandler)
+
+        const clearHandler = ()=>{
+            meeting_list[i].innerHTML = '—'
+            meeting_list[i].setAttribute('href','')
+            refreshMeetingData()
+            document.querySelector('.notification').classList.add('none')
+            document.querySelector('.notification_meeting').classList.add('none')
+            clear.removeEventListener('click', clearHandler)
+        }
+        clear.removeEventListener('click', clearHandler)
+        clear.addEventListener('click', clearHandler)
+    })
+}
+
+
+
+// -------------------------------------------------------------------
+
+
+
+function refreshMeetingData(){
+    for (let i = 0; i < meeting_list.length; i++) {
+        meetingNameList.push(meeting_list[i].innerHTML)
+        meetingLinkList.push(meeting_list[i].getAttribute('href'))
+    }
+    for (let i = 0; i < meetingNameList.length; i++) {
+        localStorage.setItem(`meetingNameList${i}`, meetingNameList[i])
+        localStorage.setItem(`meetingLinkList${i}`, meetingLinkList[i])
+    }
+}
+
+
+for (let i = 0; i < meeting_list.length; i++){
+    if(localStorage.getItem(`meetingNameList${i}`) != null){
+        meeting_list[i].innerHTML = localStorage.getItem(`meetingNameList${i}`)
+    }
+    if(localStorage.getItem(`meetingLinkList${i}`) != null){
+        meeting_list[i].setAttribute('href', localStorage.getItem(`meetingLinkList${i}`))
+    }
+}
+
+
+
+// for (let i = 0; i < meetingNameList.length; i++) {
+//     localStorage.removeItem(`meetingNameList${i}`, meetingNameList[i])
+//     localStorage.removeItem(`meetingNLinkList${i}`, meetingLinkList[i])
+// }
