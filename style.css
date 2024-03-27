@@ -99,7 +99,7 @@ a:hover{
 }
 .shedule_day{
     width: calc(23% - 3.6vh);
-    height: calc(44% - 3.6vh);
+    height: calc(40vh - 3.6vh);
     background: #414040;
     padding: 1.8vh;
     border-radius: .5em;
@@ -236,7 +236,7 @@ a:hover{
 
 /* notification box */
 .notification{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -249,7 +249,7 @@ a:hover{
     align-items: center;
 }
 .notification_meeting{
-    width: 46vh;
+    width: 22vw;
     height: 40.5vh;
     background: #202020;
     border-radius: 1em;
@@ -263,12 +263,12 @@ a:hover{
     text-align: center;
     margin-bottom: 1.5vh;
 }
-.notification span{
+.notification_meeting span{
     margin-left: 4%;
     margin-top: 2vh;
     margin-bottom: 1vh;
 }
-.notification input[type="text"]{
+.notification_meeting input[type="text"]{
     width: calc(92% - 9vh);
     height: 3vh;
     margin-left: 4%;
@@ -281,8 +281,9 @@ a:hover{
     font-weight: bold;
     font-size: 15px;
 }
-.notification input[type="text"]:active{
+.notification_meeting input[type="text"]:active{
     color: #ededed;
+    border: 1px solid #ededed;
 }
 .name_length{
     position: absolute;
@@ -337,6 +338,99 @@ a:hover{
 .leave_empty:hover{
     background-color: #474747;
 }
+
+.notification_call{
+    width: 350px;
+    background: #202020;
+    border-radius: 1em;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.notification_call p{
+    font-size: 20px;
+}
+.flexbox_call{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    margin-top: 2.5vh;
+    margin-bottom: 2vh;
+}
+.notification_call span{
+    font-size: 28px;
+    margin-left: .1vw;
+    margin-right: .1vw;
+}
+.buttonbox2{
+    width: 92%;
+    display: flex;
+    margin-top: 1.5vh;
+    margin-left: 2vh;
+    gap: 1.5vh;
+    justify-content: center;
+}
+.reject2, .approve2{
+    width: 50%;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5em;
+    cursor: pointer;
+}
+.reject2{
+    background-color: #B62324;
+}
+.reject2:hover{
+    background-color: #a21f1f;
+}
+.approve2{
+    background-color: #29903B;
+}
+.approve2:hover{
+    background-color: #21752f;
+}
+.custominput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.custominput img{
+    height: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    opacity: .5;
+    cursor: pointer;
+}
+.custominput img:hover{
+    opacity: 1;
+}
+#custominput_add{
+    padding-bottom: 3px;
+}
+#ustominput_subtract{
+    padding-top: 3px;
+}
+#customInput_display{
+    width: 5vw;
+    border: none;
+    background: transparent;
+    color: #ededed;
+    text-align: center;
+    font-size: 40px;
+}
+#customInput_display::-webkit-inner-spin-button, #customInput_display::-webkit-outer-spin-button{
+    appearance: none;
+}
+
 
 /* text colorizers */
 .text_golden{

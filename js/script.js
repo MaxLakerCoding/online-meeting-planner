@@ -152,3 +152,40 @@ for (let i = 0; i < meeting_list.length; i++){
 //     localStorage.removeItem(`meetingNameList${i}`, meetingNameList[i])
 //     localStorage.removeItem(`meetingNLinkList${i}`, meetingLinkList[i])
 // }
+
+
+
+// -------------------------------------------------------------------
+
+
+
+// for (let i = 0; i < custominput_add.length; i++) {
+//     custominput_add[i].addEventListener('click', ()=>{
+//         customInput_display[i].stepUp()
+//     })
+// }
+
+
+
+// -------------------------------------------------------------------
+
+
+
+reject2.addEventListener('click', ()=>{
+    document.querySelector('.notification').classList.add('none')
+    document.querySelector('.notification_call').classList.add('none')
+})
+
+for (let i = 0; i < callEditButtons.length; i++) {
+    callEditButtons[i].addEventListener('click', ()=>{
+        document.querySelector('.notification').classList.remove('none'); document.querySelector('.notification_call').classList.remove('none')
+        // inputMeetingName.value = meeting_list[i].innerHTML
+        // inputMeetingLink.value = meeting_list[i].getAttribute('href')
+        
+        customInput_display[0].innerHTML = call_start_hours[i].innerHTML
+        customInput_display[1].innerHTML = call_start_minutes[i].innerHTML
+        customInput_display[2].innerHTML = call_end_hours[i].innerHTML
+        customInput_display[3].innerHTML = call_end_hours[i].innerHTML
+    })
+}
+
