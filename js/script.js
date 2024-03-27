@@ -254,3 +254,17 @@ for (let i = 0; i < callEditButtons.length; i++) {
 function refreshCallData(){
 
 }
+
+
+
+// -------------------------------------------------------------------
+
+
+
+document.querySelector('.not_finished').addEventListener('click', ()=>{
+    document.querySelector('.not_finished').classList.add('none')
+})
+
+
+
+// -------------------------------------------------------------------

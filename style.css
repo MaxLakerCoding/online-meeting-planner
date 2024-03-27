@@ -435,6 +435,34 @@ a:hover{
 }
 
 
+
+.not_finished{
+    width: 100vw; 
+    height: 100vh; 
+    backdrop-filter: blur(100px); 
+    background: rgba(60, 19, 10, 0.8); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: fixed; 
+    top: 0; left: 0;
+}
+.not_finished div{
+    display: flex; 
+    flex-direction: column; 
+    width: 25vw;
+}
+.not_finished h1{
+    width: 25vw; 
+    margin-top: 20px; 
+    font-size: 20px; 
+    text-align: center;
+}
+.not_finished img{
+    border-radius: .5em;
+}
+
+
 /* text colorizers */
 .text_golden{
     color: gold;
