@@ -210,11 +210,12 @@ const confirm2Handler = ()=>{
         alert('Invalid meeting start hour value. Please check it and try again')
     }else if(customInput_display[1].value == '' || parseInt(customInput_display[1].value) < parseInt(customInput_display[1].getAttribute('min')) || parseInt(customInput_display[1].value) > parseInt(customInput_display[1].getAttribute('max'))){
         alert('Invalid meeting start minute value. Please check it and try again')
-        console.log(typeof(customInput_display[1].value))
-        console.log(typeof(customInput_display[1].getAttribute('min')))
-        console.log(typeof(customInput_display[1].getAttribute('max')))
+    }else if(customInput_display[2].value == '' || parseInt(customInput_display[2].value) < parseInt(customInput_display[2].getAttribute('min')) || parseInt(customInput_display[2].value) > parseInt(customInput_display[2].getAttribute('max'))){
+        alert('Invalid meeting end hour value. Please check it and try again')
+    }else if(customInput_display[3].value == '' || parseInt(customInput_display[3].value) < parseInt(customInput_display[3].getAttribute('min')) || parseInt(customInput_display[3].value) > parseInt(customInput_display[3].getAttribute('max'))){
+        alert('Invalid meeting end minute value. Please check it and try again')
     }else{
-        console.log(1)
+        console.log(true)
     }
 }
 confirm2.removeEventListener('click', confirm2Handler)
