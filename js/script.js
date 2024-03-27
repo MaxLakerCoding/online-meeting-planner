@@ -237,6 +237,7 @@ for (let i = 0; i < callEditButtons.length; i++) {
                 document.querySelector('.notification').classList.add('none')
                 document.querySelector('.notification_call').classList.add('none')
                 confirm2.removeEventListener('click', confirm2Handler)
+                console.log(customInput_display[2].value, customInput_display[3].value)
             }
         }
         confirm2.removeEventListener('click', confirm2Handler)
