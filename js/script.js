@@ -159,11 +159,7 @@ for (let i = 0; i < meeting_list.length; i++){
 
 
 
-// for (let i = 0; i < custominput_add.length; i++) {
-//     custominput_add[i].addEventListener('click', ()=>{
-//         customInput_display[i].stepUp()
-//     })
-// }
+//
 
 
 
@@ -179,13 +175,56 @@ reject2.addEventListener('click', ()=>{
 for (let i = 0; i < callEditButtons.length; i++) {
     callEditButtons[i].addEventListener('click', ()=>{
         document.querySelector('.notification').classList.remove('none'); document.querySelector('.notification_call').classList.remove('none')
-        // inputMeetingName.value = meeting_list[i].innerHTML
-        // inputMeetingLink.value = meeting_list[i].getAttribute('href')
         
-        customInput_display[0].innerHTML = call_start_hours[i].innerHTML
-        customInput_display[1].innerHTML = call_start_minutes[i].innerHTML
-        customInput_display[2].innerHTML = call_end_hours[i].innerHTML
-        customInput_display[3].innerHTML = call_end_hours[i].innerHTML
+        if(call_start_hours[i].innerHTML != '--'){
+            customInput_display[0].value = parseInt(call_start_hours[i].innerHTML)
+        }else{
+            customInput_display[0].value = customInput_display[0].getAttribute('min')
+        }
+        
+        if(call_start_minutes[i].innerHTML != '--'){
+            customInput_display[1].value = parseInt(call_start_minutes[i].innerHTML)
+        }else{
+            customInput_display[1].value = customInput_display[1].getAttribute('min')
+        }
+        
+        if(call_end_hours[i].innerHTML != '--'){
+            customInput_display[0].value = parseInt(call_end_hours[i].innerHTML)
+        }else{
+            customInput_display[0].value = customInput_display[0].getAttribute('min')
+        }
+        
+        if(call_end_minutes[i].innerHTML != '--'){
+            customInput_display[1].value = parseInt(call_end_minutes[i].innerHTML)
+        }else{
+            customInput_display[1].value = customInput_display[1].getAttribute('min')
+        }
+
+        // -------------------------------------------------------------------
+
     })
 }
 
+const confirm2Handler = ()=>{
+    if(customInput_display[0].value == '' || parseInt(customInput_display[0].value) < parseInt(customInput_display[0].getAttribute('min')) || parseInt(customInput_display[0].value) > parseInt(customInput_display[0].getAttribute('max'))){
+        alert('Invalid meeting start hour value. Please check it and try again')
+    }else if(customInput_display[1].value == '' || parseInt(customInput_display[1].value) < parseInt(customInput_display[1].getAttribute('min')) || parseInt(customInput_display[1].value) > parseInt(customInput_display[1].getAttribute('max'))){
+        alert('Invalid meeting start minute value. Please check it and try again')
+        console.log(typeof(customInput_display[1].value))
+        console.log(typeof(customInput_display[1].getAttribute('min')))
+        console.log(typeof(customInput_display[1].getAttribute('max')))
+    }else{
+        console.log(1)
+    }
+}
+confirm2.removeEventListener('click', confirm2Handler)
+confirm2.addEventListener('click', confirm2Handler)
+
+
+// -------------------------------------------------------------------
+
+
+
+function refreshCallData(){
+
+}

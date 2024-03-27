@@ -136,7 +136,7 @@
         </div>
     </section>
 
-    <section class="notification">
+    <section class="notification none">
 
         <div class="notification_meeting none">
             <h1>Edit meeting info</h1>
@@ -152,7 +152,7 @@
             <div class="leave_empty">Leave empty (clear)</div>
         </div>
 
-        <div class="notification_call">
+        <div class="notification_call none">
             <h1>Edit call info</h1>
             <div class="divider"></div>
             <div class="flexbox_call">
@@ -164,7 +164,7 @@
                 <span>:</span>
                 <p class="custominput">
                     <img src="img/arrow_up.svg" alt="" id="custominput_add" onclick="this.parentNode.querySelector('#customInput_display').stepUp()">
-                    <input type="number" id="customInput_display" min="0" max="59" value="0">
+                    <input disabled type="number" id="customInput_display" min="0" max="59" value="0">
                     <img src="img/arrow_down.svg" alt="" id="custominput_subtract" onclick="this.parentNode.querySelector('#customInput_display').stepDown()">
                 </p>
                 <span>–</span> 
