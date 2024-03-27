@@ -183,14 +183,17 @@ a:hover{
     align-items: center;
 }
 .calls_list li span{
-    letter-spacing: .2em;
+    margin-left: .1em;
+    margin-right: .1em;
 }
-.call_start_hours, .call_end_hours{
-    margin-left: .6em;
+.call_start_hours{
+    padding-left: 5px;
 }
-.call_start_minutes, .call_end_minutes{
-    margin-left: .2em;
-    margin-right: .4em;
+.call_start_minutes{
+    padding-right: 5px;
+} 
+.call_end_hours{
+    padding-left: 5px;
 }
 .info_current{
     width: calc(100% - 3vh);
