@@ -202,13 +202,13 @@ for (let i = 0; i < callEditButtons.length; i++) {
         // -------------------------------------------------------------------
 
         const confirm2Handler = ()=>{
-            if(customInput_display[0].value == '' || customInput_display[0].value.length >= 3 || parseInt(customInput_display[0].value) < parseInt(customInput_display[0].getAttribute('min')) || parseInt(customInput_display[0].value) > parseInt(customInput_display[0].getAttribute('max'))){
+            if(customInput_display[0].value == '' || customInput_display[0].value == '0' + parseInt(customInput_display[0].value) || customInput_display[0].value.length >= 3 || parseInt(customInput_display[0].value) < parseInt(customInput_display[0].getAttribute('min')) || parseInt(customInput_display[0].value) > parseInt(customInput_display[0].getAttribute('max'))){
                 alert('Invalid meeting start hour value. Please check it and try again')
-            }else if(customInput_display[1].value == '' || customInput_display[1].value.length >= 3 || parseInt(customInput_display[1].value) < parseInt(customInput_display[1].getAttribute('min')) || parseInt(customInput_display[1].value) > parseInt(customInput_display[1].getAttribute('max'))){
+            }else if(customInput_display[1].value == '' || customInput_display[1].value == '0' + parseInt(customInput_display[1].value) || customInput_display[1].value.length >= 3 || parseInt(customInput_display[1].value) < parseInt(customInput_display[1].getAttribute('min')) || parseInt(customInput_display[1].value) > parseInt(customInput_display[1].getAttribute('max'))){
                 alert('Invalid meeting start minute value. Please check it and try again')
-            }else if(customInput_display[2].value == '' || customInput_display[2].value.length >= 3 || parseInt(customInput_display[2].value) < parseInt(customInput_display[2].getAttribute('min')) || parseInt(customInput_display[2].value) > parseInt(customInput_display[2].getAttribute('max'))){
+            }else if(customInput_display[2].value == '' || customInput_display[2].value == '0' + parseInt(customInput_display[2].value) || customInput_display[2].value.length >= 3 || parseInt(customInput_display[2].value) < parseInt(customInput_display[2].getAttribute('min')) || parseInt(customInput_display[2].value) > parseInt(customInput_display[2].getAttribute('max'))){
                 alert('Invalid meeting end hour value. Please check it and try again')
-            }else if(customInput_display[3].value == '' || customInput_display[3].value.length >= 3 || parseInt(customInput_display[3].value) < parseInt(customInput_display[3].getAttribute('min')) || parseInt(customInput_display[3].value) > parseInt(customInput_display[3].getAttribute('max'))){
+            }else if(customInput_display[3].value == '' || customInput_display[3].value == '0' + parseInt(customInput_display[3].value) || customInput_display[3].value.length >= 3 || parseInt(customInput_display[3].value) < parseInt(customInput_display[3].getAttribute('min')) || parseInt(customInput_display[3].value) > parseInt(customInput_display[3].getAttribute('max'))){
                 alert('Invalid meeting end minute value. Please check it and try again')
             }else{
                 if(parseInt(customInput_display[0].value) < 10 && customInput_display[0].value.length < 2){
@@ -237,7 +237,8 @@ for (let i = 0; i < callEditButtons.length; i++) {
                 document.querySelector('.notification').classList.add('none')
                 document.querySelector('.notification_call').classList.add('none')
                 confirm2.removeEventListener('click', confirm2Handler)
-                console.log(customInput_display[2].value, customInput_display[3].value)
+
+
             }
         }
         confirm2.removeEventListener('click', confirm2Handler)
