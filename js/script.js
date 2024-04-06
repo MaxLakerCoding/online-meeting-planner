@@ -217,19 +217,19 @@ for (let i = 0; i < callEditButtons.length; i++) {
                     call_start_hours[i].innerHTML = customInput_display[0].value
                 }
 
-                if(parseInt(customInput_display[1].value) < 10 && customInput_display[0].value.length < 2){
+                if(parseInt(customInput_display[1].value) < 10 && customInput_display[1].value.length < 2){
                     call_start_minutes[i].innerHTML = '0' + customInput_display[1].value
                 }else{
                     call_start_minutes[i].innerHTML = customInput_display[1].value
                 }
 
-                if(parseInt(customInput_display[2].value) < 10 && customInput_display[0].value.length < 2){
+                if(parseInt(customInput_display[2].value) < 10 && customInput_display[2].value.length < 2){
                     call_end_hours[i].innerHTML = '0' + customInput_display[2].value
                 }else{
                     call_end_hours[i].innerHTML = customInput_display[2].value
                 }
 
-                if(parseInt(customInput_display[3].value) < 10 && customInput_display[0].value.length < 2){
+                if(parseInt(customInput_display[3].value) < 10 && customInput_display[3].value.length < 2){
                     call_end_minutes[i].innerHTML = '0' + customInput_display[3].value
                 }else{
                     call_end_minutes[i].innerHTML = customInput_display[3].value
