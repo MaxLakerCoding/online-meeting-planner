@@ -2,6 +2,7 @@ const edit = document.querySelector('.edit')
 const editButtons = document.querySelectorAll('.edit_button')
 const meetingEditButtons = document.querySelectorAll('.edit_meeting')
 const callEditButtons = document.querySelectorAll('.edit_call')
+const coffee = document.querySelector('.coffee')
 
 
 
@@ -11,9 +12,6 @@ const callEditButtons = document.querySelectorAll('.edit_call')
 
 const inputMeetingName = document.querySelector('#name')
 const inputMeetingLink = document.querySelector('#link')
-
-const reject = document.querySelector('.reject')
-const confirm = document.querySelector('.approve')
 const clear = document.querySelector('.leave_empty')
 
 const meeting_list = document.querySelectorAll('.meeting')
@@ -35,8 +33,12 @@ let meetingLinkList = []
 
 
 
+const reject = document.querySelector('.reject')
 const reject2 = document.querySelector('.reject2')
+const reject3 = document.querySelector('.reject3')
+const confirm = document.querySelector('.approve')
 const confirm2 = document.querySelector('.approve2')
+const confirm3 = document.querySelector('.approve3')
 
 
 
@@ -44,14 +46,20 @@ const confirm2 = document.querySelector('.approve2')
 
 
 
+const calls = document.querySelectorAll('.call')
 const call_start_hours = document.querySelectorAll('.call_start_hours')
 const call_start_minutes = document.querySelectorAll('.call_start_minutes')
 const call_end_hours = document.querySelectorAll('.call_end_hours')
 const call_end_minutes = document.querySelectorAll('.call_end_minutes')
 
+let call_start_hours_list = []
+let call_start_minutes_list = []
+let call_end_hours_list = []
+let call_end_minutes_list = []
+
+const clear_calls = document.querySelector('.clear_calls')
+
 const customInputs = document.querySelectorAll('.custominput')
-const customInput_typeHour_valueList = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23']
-const customInput_typeMinute_valueList = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59']
 const customInput_display = document.querySelectorAll('#customInput_display')
 const customInput_button_add = document.querySelectorAll('#custominput_add')
 const customInput_button_subtract = document.querySelectorAll('#custominput_subtract')

@@ -48,6 +48,20 @@ a:hover{
     background-color: #414141;
     border-radius: .5em;
 }
+.coffee{
+    background: url(img/coffee.svg);
+    background-size: contain;
+    width: 35px;
+    height: 34px;
+    padding: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.coffee:hover{
+    background-color: #414141;
+    border-radius: .5em;
+}
 .logo{
     background: url(img/dev.svg);
     background-size: contain;
@@ -161,8 +175,27 @@ a:hover{
     flex-direction: column;
     padding: 1.5vh;
     margin-top: 1vh;
-
     align-items: center;
+}
+.calls h1{
+    width: calc(100% - 10px);
+    margin-left: 10px;
+    position: relative;
+    font-size: 1.8rem ;
+    display: flex;
+    align-items: center;
+}
+.clear_calls{
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-top: -0.2rem;
+    padding: .3vh;
+    position: absolute;
+    right: 10px;
+}
+.clear_calls:hover{
+    background-color: #414141;
+    border-radius: .2em;
 }
 .calls p{
     width: 90%;
@@ -272,14 +305,13 @@ a:hover{
     margin-bottom: 1vh;
 }
 .notification_meeting input[type="text"]{
-    width: calc(92% - 9vh);
+    width: calc(92% - 1.5vh);
     height: 3vh;
     margin-left: 4%;
     background: #0f0f0f;
     border: 1px solid #434343;
     border-radius: 1em;
     padding: 1.5vh;
-    padding-right: 7.5vh;
     color: #c7c7c7;
     font-weight: bold;
     font-size: 15px;
@@ -368,7 +400,7 @@ a:hover{
     margin-left: .1vw;
     margin-right: .1vw;
 }
-.buttonbox2{
+.buttonbox2, .buttonbox3{
     width: 92%;
     display: flex;
     margin-top: 1.5vh;
@@ -376,7 +408,7 @@ a:hover{
     gap: 1.5vh;
     justify-content: center;
 }
-.reject2, .approve2{
+.reject2, .approve2, .reject3, .approve3{
     width: 50%;
     height: 6vh;
     display: flex;
@@ -385,17 +417,21 @@ a:hover{
     border-radius: .5em;
     cursor: pointer;
 }
-.reject2{
+.reject2, .reject3{
     background-color: #B62324;
 }
-.reject2:hover{
+.reject2:hover, .reject3:hover{
     background-color: #a21f1f;
 }
-.approve2{
+.approve2, .approve3{
     background-color: #29903B;
 }
-.approve2:hover{
-    background-color: #21752f;
+.approve2:hover, .approve3:hover{
+    background-color: #21752f;   
+}
+.approve3:hover{
+    background-color: #21752f; 
+    color: gold;  
 }
 .custominput{
     display: flex;
@@ -433,6 +469,20 @@ a:hover{
 #customInput_display::-webkit-inner-spin-button, #customInput_display::-webkit-outer-spin-button{
     appearance: none;
 }
+.notification_coffee{
+    width: 350px;
+    background: #202020;
+    border-radius: 1em;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.notification_coffee p{
+    padding: 1.2vh;
+    padding-top: 2vh;
+    padding-bottom: 1.5vh;
+}
 
 
 
@@ -467,8 +517,14 @@ a:hover{
 .text_golden{
     color: gold;
 }
+.text_active{
+    background-color: #16a084;
+}
 
 /* block remover */
+.edit_call_none{
+    display: none;
+}
 .none{
     display: none;
 }

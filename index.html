@@ -11,6 +11,7 @@
     <!-- top menu -->
     <nav class="navbar">
         <div class="edit"></div>
+        <div class="coffee"></div>
         <a href="https://github.com/MaxLakerCoding" class="logo" target="_blank"></a>
         <h1>Planner by <span class="text_golden">MaxLakerCoding</span></h1>
     </nav>
@@ -118,16 +119,16 @@
             </div>
             <div class="divider"></div>
             <div class="calls">
-                <h1>Call shedule</h1>
+                <h1>Call shedule <img class="clear_calls none" src="./img/clear.svg"></h1>
                 <ul class="calls_list">
-                    <li>1) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
-                    <li>2) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
-                    <li>3) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
-                    <li>4) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
-                    <li>5) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
-                    <li>6) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
-                    <li>7) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
-                    <li>8) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
+                    <li class="call">1) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
+                    <li class="call">2) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
+                    <li class="call">3) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
+                    <li class="call">4) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
+                    <li class="call">5) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
+                    <li class="call">6) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
+                    <li class="call">7) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
+                    <li class="call">8) <span class="call_start_hours">--</span>:<span class="call_start_minutes">--</span>-<span class="call_end_hours">--</span>:<span class="call_end_minutes">--</span> <img src="img/edit.svg" class="edit_button edit_call none"></li>
                 </ul>
             </div>
             <div class="info_current">
@@ -183,6 +184,18 @@
             <div class="buttonbox2">
                 <div class="reject2">Cancel</div>
                 <div class="approve2">Confirm</div>
+            </div>
+        </div>
+
+        <div class="notification_coffee none">
+            <h1>Support for the author</h1>
+            <div class="divider"></div>
+            <p>
+                I work hard on every project, putting my best knowledge and effort into it. If you want to fuel my inspiration, you can donate some money to me, and I'll be extremely grateful
+            </p>
+            <div class="buttonbox3">
+                <div class="reject3">Nevermind</div>
+                <div onclick="donate()" class="approve3">Donate❤︎</div>
             </div>
         </div>
     </section>
